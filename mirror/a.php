@@ -1,6 +1,8 @@
 <?
 require_once("config.php");
 
+include 'global.php';
+
 //Handle remote administration requests from main server.
 
 set_time_limit(300);
