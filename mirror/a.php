@@ -17,6 +17,9 @@ if ($key != SECRET_KEY)
 
 set_time_limit(3600);
 
+if (!file_exists("mapsgohere/"))
+	exec('mkdir mapsgohere');
+
 //wget is most reliable and memory-efficient.
 exec('wget ' . "\"http://osu.ppy.sh/d/$beatmapSetId?m=$mirrorId&k=" . SECRET_KEY . "\" -O " . FILES_DIRECTORY . $beatmapSetId);
 if ($noVideo)
