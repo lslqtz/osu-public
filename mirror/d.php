@@ -3,11 +3,11 @@ require_once('config.php');
 require_once('global.php');
 
 //Read in request variables.
-$noVideo = strpos($beatmapSetId,'n');
+$noVideo = strpos($_REQUEST['s'],'n') !== false;
 $filename = $_REQUEST['f'];
 $receivedChecksum = $_REQUEST['c'];
 $timestamp = (int)$_REQUEST['t'];
-$beatmapSetId = (int)$_REQUEST['s'];
+$beatmapSetId = (int)str_replace('n','',$_REQUEST['s']);
 $userId = (int)$_REQUEST['u'];
 
 $calculatedChecksum = md5($filename . $userId . $timestamp . SECRET_KEY);
