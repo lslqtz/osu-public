@@ -1,7 +1,6 @@
 <?
-require_once("config.php");
-
-include 'global.php';
+require_once('config.php');
+require_once('global.php');
 
 //Handle remote administration requests from main server.
 

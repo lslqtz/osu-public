@@ -1,4 +1,4 @@
-<?PHP
+<?
 
 // http://php.net/manual/en/security.magicquotes.disabling.php
 if (get_magic_quotes_gpc() && !(isset($magic_quotes_rewritten) && $magic_quotes_rewritten)) {
@@ -17,3 +17,5 @@ if (get_magic_quotes_gpc() && !(isset($magic_quotes_rewritten) && $magic_quotes_
 	}
 	unset($process);
 }
+
+?>
