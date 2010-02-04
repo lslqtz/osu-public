@@ -1,6 +1,8 @@
 <?
 include("config.php");
 
+include 'global.php';
+
 //Read in request variables.
 $noVideo = strpos($beatmapSetId,'n');
 $filename = $_REQUEST['f'];
