@@ -59,7 +59,7 @@ for %%g in (%args%) do (
 	echo !infile!
 	del /Q "!outfile!" 2> NUL
 
-	%~dp0mencoder.exe -endpos 60 -msglevel "all=3:statusline=0" -nosound -ovc copy -of avi -o "!outfile!" -- "!infile!"
+	%~dp0mencoder.exe -msglevel "all=3:statusline=0" -nosound -ovc copy -of avi -o "!outfile!" -- "!infile!"
 
 	rem For some reason, mencoder doesn't set the error level.
 	rem To detect if the encode worked or not, we check if the
