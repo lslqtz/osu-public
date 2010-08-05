@@ -70,6 +70,7 @@ for %%g in (%args%) do (
 		echo.
 		echo Encoding !infile! failed; see above >&2
 		call :end
+		exit /B 2
 	)
 )
 
